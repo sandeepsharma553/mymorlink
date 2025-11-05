@@ -4,7 +4,7 @@
       "details": [
         {
           "appID": "C2B2NYKR5Y.com.mymor",
-          "paths": [ "/invite/*", "/invite", "/invite/*/*" ]
+          "paths": [ "/invite/*", "/invite", "/i/*" ]
         }
       ]
     }

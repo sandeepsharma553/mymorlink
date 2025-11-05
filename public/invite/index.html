@@ -1,0 +1,15 @@
+<!doctype html><meta charset="utf-8">
+<title>Join group</title>
+<script>
+  const p = new URLSearchParams(location.search);
+  const g = p.get('g'); const t = p.get('t');
+  // Try to open the app via universal/app links (Android/iOS will handle https natively)
+  // If not installed, show buttons after a short delay.
+  setTimeout(() => document.getElementById('fallback').style.display='block', 1200);
+</script>
+<h1>Opening MyMor…</h1>
+<div id="fallback" style="display:none">
+  <p>If nothing happens, install the app:</p>
+  <p><a href="https://play.google.com/store/apps/details?id=com.mymor">Get it on Google Play</a></p>
+  <p><a href="https://apps.apple.com/app/idXXXXXXXXX">Download on the App Store</a></p>
+</div>

@@ -1,0 +1,13 @@
+[
+    {
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "com.mymor",
+        "sha256_cert_fingerprints": [
+          "ac:a2:5b:bc:8f:22:04:de:63:a4:43:96:cc:5d:21:7c:82:fd:16:f4:21:1e:e9:1e:b3:d2:0a:6b:0a:15:89:bf" 
+        ]
+      }
+    }
+  ]
+  

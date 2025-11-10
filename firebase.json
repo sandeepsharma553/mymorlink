@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "mymor-link",
     "public": "public",
     "ignore": [
       "firebase.json",
@@ -24,6 +25,12 @@
             "value": "application/json"
           }
         ]
+      }
+    ],
+    "rewrites": [
+      {
+        "source": "/invite/**",
+        "destination": "/invite.html"
       }
     ]
   }

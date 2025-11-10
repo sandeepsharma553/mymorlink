@@ -6,7 +6,7 @@
     "mymor-one": {
       "hosting": {
         "links": [
-          "links-mymor"
+          "mymor-link"
         ]
       }
     }

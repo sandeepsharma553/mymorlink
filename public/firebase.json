@@ -1,20 +1,30 @@
 {
-    "hosting": {
-      "public": "public",
-      "headers": [
-        {
-          "source": "/apple-app-site-association",
-          "headers": [{ "key": "Content-Type", "value": "application/json" }]
-        },
-        {
-          "source": "/.well-known/assetlinks.json",
-          "headers": [{ "key": "Content-Type", "value": "application/json" }]
-        }
-      ],
-      "rewrites": [
-        { "source": "/invite", "destination": "/invite.html" },
-        { "source": "/i/**", "destination": "/invite.html" }
-      ]
-    }
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "headers": [
+      {
+        "source": "/.well-known/assetlinks.json",
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ]
+      },
+      {
+        "source": "/.well-known/apple-app-site-association",
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ]
+      }
+    ]
   }
-  
+}

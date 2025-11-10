@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "mymor-one"
+  },
+  "targets": {
+    "mymor-one": {
+      "hosting": {
+        "links": [
+          "links-mymor"
+        ]
+      }
+    }
+  }
+}

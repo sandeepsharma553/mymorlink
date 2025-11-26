@@ -1,4 +1,4 @@
-<!doctype html><meta charset="utf-8">
+<!-- <!doctype html><meta charset="utf-8">
 <title>Join group</title>
 <script>
   const p = new URLSearchParams(location.search);
@@ -12,4 +12,46 @@
   <p>If nothing happens, install the app:</p>
   <p><a href="https://play.google.com/store/apps/details?id=com.mymor&pcampaignid=web_share">Get it on Google Play</a></p>
   <p><a href="https://apps.apple.com/bw/app/my-mor3/id6747422496">Download on the App Store</a></p>
-</div>
+</div> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Open MyMor</title>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const path = window.location.pathname.split("/");
+      const token = path[path.length - 1];
+      const deepLink = `mymor://join/${token}`;
+      const ua = navigator.userAgent || "";
+      const isAndroid = /Android/i.test(ua);
+      const isIOS = /iPhone|iPad|iPod/i.test(ua);
+
+      // Try to open app
+      window.location.href = deepLink;
+
+      // After short delay → fallback to store
+      setTimeout(() => {
+        if (isAndroid) {
+          window.location.href =
+            "https://play.google.com/store/apps/details?id=com.mymor";
+        } else if (isIOS) {
+          window.location.href =
+            "https://apps.apple.com/bw/app/my-mor3/id6747422496";
+        } else {
+          document.body.innerHTML =
+            "<h2>Open this link on your phone to join the group.</h2>";
+        }
+      }, 1500);
+    });
+  </script>
+</head>
+
+<body style="font-family:sans-serif;text-align:center;margin-top:40vh;">
+  <p>Opening MyMor...</p>
+</body>
+
+</html>
